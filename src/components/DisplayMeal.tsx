@@ -10,6 +10,8 @@ interface CardInf {
 
 const Display: React.FC = () => {
     const [cards, setCards] = useState<CardInf[]>([]);
+    const totalKcal = cards.reduce((total, item) => total + item.kCal, 0);
+
 
     useEffect(() => {
         fetchData();
@@ -42,6 +44,7 @@ const Display: React.FC = () => {
 
     return (
         <>
+            <strong>Total calories: {totalKcal} kCal</strong>
             {cards.map((card: CardInf) => (
                 <div key={card.id} className="card">
                     <div className="cardTitle">

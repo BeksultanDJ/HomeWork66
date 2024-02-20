@@ -33,10 +33,59 @@
   }
 }
 
+ul {
+  padding: 0;
+}
+
+li {
+  list-style: none;
+  display: inline-block;
+  margin: 0 0 0 50px;
+}
+
 .card {
   padding: 2em;
+  margin: 25px;
+  border-radius: 20px;
 }
 
 .read-the-docs {
   color: #888;
 }
+
+.card {
+  border: 1px solid black;
+  display: flex;
+  padding: 15px;
+  align-items: center;
+
+}
+
+.cardTitle {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  width: 250px;
+}
+
+.cardTitle p {
+  margin: 0 0 5px 0;
+  color: gray;
+}
+
+.cardKcal {
+  margin-left: auto;
+  font-weight: 600;
+}
+
+.btns {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+}
+
+.btns button {
+  padding: 10px;
+  margin: 10px;
+}
+

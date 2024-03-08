@@ -1,5 +1,7 @@
 import { useState } from "react";
 import axios from 'axios';
+import {NavLink} from "react-router-dom";
+
 
 const NewMeal = () => {
     const [time, setTime] = useState('');
@@ -31,7 +33,8 @@ const NewMeal = () => {
 
     return (
         <>
-            <form >
+            <h4>Add/ Edit meal</h4>
+            <form onSubmit={handleSubmit} className="form">
                 <select value={time} onChange={(e) => setTime(e.target.value)}>
                     <option value="any"></option>
                     <option value="Breakfast">Breakfast</option>
@@ -53,7 +56,7 @@ const NewMeal = () => {
                     value={kCal}
                     onChange={(e) => setKcal(parseFloat(e.target.value))}
                 />
-                <button onClick={handleSubmit}>Save</button>
+                <NavLink className="navLinks" to="/"><button type="submit">ok</button></NavLink>
             </form>
         </>
     )

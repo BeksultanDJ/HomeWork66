@@ -10,9 +10,7 @@ interface CardInf {
 
 const Display: React.FC = () => {
     const [cards, setCards] = useState<CardInf[]>([]);
-    const totalKcal = cards.reduce((total, item) => total + item.kCal, 0);
-
-
+    const totalKcal = cards.reduce((total, kCal) => total + kCal.kCal, 0);
     useEffect(() => {
         fetchData();
     }, []);

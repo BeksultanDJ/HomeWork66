@@ -89,3 +89,14 @@ li {
   margin: 10px;
 }
 
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form input, select {
+  margin: 10px 0;
+  padding: 10px;
+}
+
+
